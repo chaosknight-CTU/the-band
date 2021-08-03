@@ -1,0 +1,22 @@
+
+
+@media (min-width: 1024px){
+
+}
+
+
+@media (min-width: 748px) and (max-width:1023px) {
+
+}
+
+
+@media (max-width: 740px){
+    #nav > li {
+            display:block;
+    }
+    
+    #header .search-icon {
+        display: none;
+    }
+
+}

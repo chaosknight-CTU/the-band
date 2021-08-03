@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
     <title>The Band</title>
     <link rel="icon" href="https://vtv1.mediacdn.vn/thumb_w/650/2021/5/23/butter-bts-press-con-1621764282210537572326.jpg" type="image/x-icon" />
+  
 </head>
 <body>
+    
     <div id="main">
     
         <div id="header">
@@ -20,7 +23,7 @@
                 <li><a href="#tour">Tour</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li>
-                    <a href="">
+                    <a href="#">
                         More
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
@@ -35,6 +38,9 @@
             <!--begin: search button-->
             <div class="search-bth">
                 <i class="search-icon ti-search"></i>
+            </div>
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
             </div>
             <!--end: search button-->
             
@@ -168,5 +174,32 @@
             <p class="coppyright">Powered by <a href="">w3.css</a></p>
         </div>
     </div>
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
+        
+        mobileMenu.onclick = function(){
+            var isClosed = header.clientHeight === headerHeight;
+            if(isClosed) {
+                header.style.height = 'auto';
+
+            } else {
+                header.style.height = null;
+            }
+        }
+
+
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i  = 0; i < menuItems.length ; i++) {
+            var menuItem = menuItems[i];
+
+            menuItem.onclick= function() {
+                header.style.height = null;
+            }
+            
+        }
+
+    </script>
 </body>
 </html>
