@@ -52,7 +52,7 @@
     }
     .col-third {
         width: 100%;
-        margin-bottom: 2px;
+        margin-bottom: 15px;
     }
    
     .row .places-list {
@@ -70,14 +70,19 @@
     }
     .col-two {  
         width: 100%;
+        padding-top: 9px;
+      
     }
+    
+
+   
     .col.col-two.contact-form {
         padding-top: 15px;
     }
     .about-text {
         margin-bottom: 10px;
     }
-   
+    
     
 
 }
